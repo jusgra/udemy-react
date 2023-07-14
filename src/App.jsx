@@ -1,7 +1,7 @@
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
 
-const App = () => {
+export default function App() {
   const expenses = [
     {
       id: "e1",
@@ -24,19 +24,15 @@ const App = () => {
     },
   ];
 
-  // return React.createElement(
-  //   'div',
-  //   {},
-  //   React.createElement('h2', {}, "Let's get started!"),
-  //   React.createElement(Expenses, { items: expenses })
-  // );
+  const handleNewExpense = (newExpense) => {
+    console.log("From App.js");
+    console.log(newExpense);
+  };
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onNewExpense={handleNewExpense} />
       <Expenses items={expenses} />
     </div>
   );
-};
-
-export default App;
+}

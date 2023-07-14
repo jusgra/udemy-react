@@ -1,23 +1,20 @@
-import React, { useState } from "react";
-
 import "./ExpenseForm.css";
+import { useState } from "react";
 
-const ExpenseForm = () => {
+export default function ExpenseForm({ onExpenseForm }) {
   //const [input, setInput] = useState({ title: "", amount: "", date: "" });
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
 
   const handleChange = (identf, val) => {
-    //more safe to use in many states situation, where hundred states
-    //gets updated in a line, you are guaranteed to use the most
-    //recent state to update the title
-    // setInput((oldInput) => {
-    //   return { ...oldInput, title: event.target.value };
-    // });
+    if (identf === "title") setEnteredTitle(val);
+    else if (identf === "amount") setEnteredAmount(val);
+    else if (identf === "date") setEnteredDate(val);
+  };
 
-    //possible to be useing an outdated state values to update it
-    // setInput({ ...input, title: event.target.value });
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
     const stateObject = {
       title: enteredTitle,
@@ -25,15 +22,17 @@ const ExpenseForm = () => {
       date: enteredDate,
     };
 
-    if (identf === "title") setEnteredTitle(val);
-    else if (identf === "amount") setEnteredAmount(val);
-    else if (identf === "date") setEnteredDate(val);
+    // console.log(stateObject);
 
-    console.log(stateObject);
+    setEnteredTitle("");
+    setEnteredAmount("");
+    setEnteredDate("");
+
+    onExpenseForm(stateObject);
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
@@ -75,6 +74,4 @@ const ExpenseForm = () => {
       </div>
     </form>
   );
-};
-
-export default ExpenseForm;
+}
