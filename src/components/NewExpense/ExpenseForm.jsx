@@ -19,10 +19,8 @@ export default function ExpenseForm({ onExpenseForm }) {
     const stateObject = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: new Date(enteredDate),
     };
-
-    // console.log(stateObject);
 
     setEnteredTitle("");
     setEnteredAmount("");
