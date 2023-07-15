@@ -1,4 +1,4 @@
-import "./ExpenseForm.css";
+import "../css/ExpenseForm.css";
 import { useState } from "react";
 
 export default function ExpenseForm({ onExpenseForm }) {

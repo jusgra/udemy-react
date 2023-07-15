@@ -1,5 +1,5 @@
 import ExpenseForm from "./ExpenseForm";
-import "./NewExpense.css";
+import "../css/NewExpense.css";
 
 export default function NewExpense({ onNewExpense }) {
   const handleExpenseForm = (expense) => {

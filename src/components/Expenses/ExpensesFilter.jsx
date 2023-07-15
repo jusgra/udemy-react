@@ -1,4 +1,4 @@
-import "./ExpensesFilter.css";
+import "../css/ExpensesFilter.css";
 
 export default function ExpensesFilter({ filterdYear, onExpensesFilter }) {
   const handleChange = (e) => {
