@@ -1,11 +1,12 @@
 import "../css/ExpenseForm.css";
 import { useState } from "react";
 
-export default function ExpenseForm({ onExpenseForm }) {
+export default function ExpenseForm(props) {
   //const [input, setInput] = useState({ title: "", amount: "", date: "" });
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
+  const [showForm, setShowForm] = useState(false);
 
   const handleChange = (identf, val) => {
     if (identf === "title") setEnteredTitle(val);
@@ -26,9 +27,16 @@ export default function ExpenseForm({ onExpenseForm }) {
     setEnteredAmount("");
     setEnteredDate("");
 
-    onExpenseForm(stateObject);
+    props.onExpenseForm(stateObject);
+
+    setShowForm(false);
   };
 
+  const toggleForm = () => {
+    setShowForm(!showForm);
+  };
+
+  // if (showForm) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="new-expense__controls">
@@ -68,8 +76,14 @@ export default function ExpenseForm({ onExpenseForm }) {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={props.onShowForm}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
   );
+  // } else {
+  //   return <button onClick={toggleForm}>Add New Expense</button>;
+  // }
 }
