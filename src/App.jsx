@@ -22,6 +22,27 @@ const DUMMY_EXPENSE = [
     amount: 450,
     date: new Date(2021, 5, 12),
   },
+
+  {
+    id: "e5",
+    title: "PS5",
+    amount: 110,
+    date: new Date(2022, 3, 12),
+  },
+
+  {
+    id: "e6",
+    title: "Pants",
+    amount: 450,
+    date: new Date(2022, 2, 12),
+  },
+
+  {
+    id: "e7",
+    title: "Computer",
+    amount: 149,
+    date: new Date(2022, 1, 12),
+  },
 ];
 
 export default function App() {

@@ -2,7 +2,6 @@ import "../css/ExpenseForm.css";
 import { useState } from "react";
 
 export default function ExpenseForm(props) {
-  //const [input, setInput] = useState({ title: "", amount: "", date: "" });
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -19,7 +18,7 @@ export default function ExpenseForm(props) {
 
     const stateObject = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -35,8 +34,6 @@ export default function ExpenseForm(props) {
   const toggleForm = () => {
     setShowForm(!showForm);
   };
-
-  // if (showForm) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="new-expense__controls">
@@ -83,7 +80,4 @@ export default function ExpenseForm(props) {
       </div>
     </form>
   );
-  // } else {
-  //   return <button onClick={toggleForm}>Add New Expense</button>;
-  // }
 }
