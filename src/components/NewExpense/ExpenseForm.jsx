@@ -31,9 +31,6 @@ export default function ExpenseForm(props) {
     setShowForm(false);
   };
 
-  const toggleForm = () => {
-    setShowForm(!showForm);
-  };
   return (
     <form onSubmit={handleSubmit}>
       <div className="new-expense__controls">
