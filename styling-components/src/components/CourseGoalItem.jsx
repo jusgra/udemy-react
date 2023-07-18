@@ -1,8 +1,6 @@
-import React from 'react';
+import "./css/CourseGoalItem.css";
 
-import './CourseGoalItem.css';
-
-const CourseGoalItem = props => {
+const CourseGoalItem = (props) => {
   // const [deleteText, setDeleteText] = useState('');
 
   const deleteHandler = () => {
