@@ -9,7 +9,7 @@ const CourseGoalItem = (props) => {
   };
 
   return (
-    <li className="goal-item" onClick={deleteHandler}>
+    <li className="goal-item form-control" onClick={deleteHandler}>
       {props.children}
     </li>
   );
