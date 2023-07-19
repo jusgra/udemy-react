@@ -34,9 +34,10 @@ export default function App() {
     <div>
       <Header />
       <InputForm />
-      <TableResults />
+
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
+      <TableResults />
     </div>
   );
 }
