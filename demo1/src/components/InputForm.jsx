@@ -1,9 +1,15 @@
 import { useState } from "react";
+import butStyles from "../css/button.module.css";
+import formStyles from "../css/form.module.css";
 
 export default function InputForm(props) {
   const [inputs, setInputs] = useState({ current: "", yearly: "", expected: "", duration: "" });
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.submitHandle(inputs);
+    setInputs({ current: "", yearly: "", expected: "", duration: "" });
+  };
 
   const handleChange = (prop, value) => {
     setInputs((oldInputs) => {
@@ -17,28 +23,30 @@ export default function InputForm(props) {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <div className="input-group">
+    <form className={formStyles.form} onSubmit={handleSubmit}>
+      <div className={formStyles["input-group"]}>
         <p>
-          <label htmlFor="current-savings">Current Savings ($)</label>
+          <label htmlFor="current-savings">Current Savings (€)</label>
           <input
             onChange={(e) => handleChange("current", e.target.value)}
             value={inputs.current}
             type="number"
             id="current-savings"
+            required
           />
         </p>
         <p>
-          <label htmlFor="yearly-contribution">Yearly Savings ($)</label>
+          <label htmlFor="yearly-contribution">Yearly Savings (€)</label>
           <input
             onChange={(e) => handleChange("yearly", e.target.value)}
             value={inputs.yearly}
             type="number"
             id="yearly-contribution"
+            required
           />
         </p>
       </div>
-      <div className="input-group">
+      <div className={formStyles["input-group"]}>
         <p>
           <label htmlFor="expected-return">Expected Interest (%, per year)</label>
           <input
@@ -46,6 +54,7 @@ export default function InputForm(props) {
             value={inputs.expected}
             type="number"
             id="expected-return"
+            required
           />
         </p>
         <p>
@@ -55,14 +64,15 @@ export default function InputForm(props) {
             value={inputs.duration}
             type="number"
             id="duration"
+            required
           />
         </p>
       </div>
-      <p className="actions">
-        <button onClick={handleClick} type="reset" className="buttonAlt">
+      <p className={butStyles.actions}>
+        <button onClick={handleClick} type="reset" className={butStyles.buttonAlt}>
           Reset
         </button>
-        <button type="submit" className="button">
+        <button type="submit" className={butStyles.button}>
           Calculate
         </button>
       </p>

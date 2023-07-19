@@ -1,25 +1,26 @@
 import Header from "./components/Header";
 import InputForm from "./components/InputForm";
-import TableResults from "./components/TableResults";
+import Table from "./components/Table";
+import { useState } from "react";
+import styles from "./css/msg.module.css";
 
 export default function App() {
+  const [data, setData] = useState(null);
+
   const calculateHandler = (userInput) => {
-    // Should be triggered when form is submitted
-    // You might not directly want to bind it to the submit event on the form though...
+    const yearlyData = [];
+    console.log(userInput.current);
 
-    const yearlyData = []; // per-year results
+    let currentSavings = +userInput.current;
+    const yearlyContribution = +userInput.yearly;
+    const expectedReturn = +userInput.expected / 100;
+    const duration = +userInput.duration;
 
-    let currentSavings = +userInput["current-savings"]; // feel free to change the shape of this input object!
-    const yearlyContribution = +userInput["yearly-contribution"]; // as mentioned: feel free to change the shape...
-    const expectedReturn = +userInput["expected-return"] / 100;
-    const duration = +userInput["duration"];
-
-    // The below code calculates yearly results (total savings, interest etc)
     for (let i = 0; i < duration; i++) {
       const yearlyInterest = currentSavings * expectedReturn;
       currentSavings += yearlyInterest + yearlyContribution;
       yearlyData.push({
-        // feel free to change the shape of the data pushed to the array!
+        initial: +userInput.current,
         year: i + 1,
         yearlyInterest: yearlyInterest,
         savingsEndOfYear: currentSavings,
@@ -27,17 +28,16 @@ export default function App() {
       });
     }
 
-    // do something with yearlyData ...
+    //console.log(yearlyData);
+
+    setData(yearlyData);
   };
 
   return (
     <div>
       <Header />
-      <InputForm />
-
-      {/* Todo: Show below table conditionally (only once result data is available) */}
-      {/* Show fallback text if no data is available */}
-      <TableResults />
+      <InputForm submitHandle={calculateHandler} />
+      {data ? <Table items={data} /> : <h2 className={styles.msg}>Please input some data</h2>}
     </div>
   );
 }
