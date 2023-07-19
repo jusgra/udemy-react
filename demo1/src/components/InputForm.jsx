@@ -1,5 +1,6 @@
 import { useState } from "react";
-import butStyles from "../css/button.module.css";
+
+import buttonStyles from "../css/button.module.css";
 import formStyles from "../css/form.module.css";
 
 export default function InputForm(props) {
@@ -8,16 +9,15 @@ export default function InputForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.submitHandle(inputs);
-    setInputs({ current: "", yearly: "", expected: "", duration: "" });
   };
 
-  const handleChange = (prop, value) => {
+  const handleChange = (property, value) => {
     setInputs((oldInputs) => {
-      return { ...oldInputs, [prop]: value };
+      return { ...oldInputs, [property]: value };
     });
   };
 
-  const handleClick = (e) => {
+  const handleResetClick = (e) => {
     e.preventDefault();
     setInputs({ current: "", yearly: "", expected: "", duration: "" });
   };
@@ -68,11 +68,11 @@ export default function InputForm(props) {
           />
         </p>
       </div>
-      <p className={butStyles.actions}>
-        <button onClick={handleClick} type="reset" className={butStyles.buttonAlt}>
+      <p className={buttonStyles.actions}>
+        <button onClick={handleResetClick} type="reset" className={buttonStyles.buttonAlt}>
           Reset
         </button>
-        <button type="submit" className={butStyles.button}>
+        <button type="submit" className={buttonStyles.button}>
           Calculate
         </button>
       </p>

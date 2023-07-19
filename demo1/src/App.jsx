@@ -1,15 +1,16 @@
+import { useState } from "react";
+
 import Header from "./components/Header";
 import InputForm from "./components/InputForm";
 import Table from "./components/Table";
-import { useState } from "react";
+
 import styles from "./css/msg.module.css";
 
 export default function App() {
-  const [data, setData] = useState(null);
+  const [calculatedData, setCalculatedData] = useState(null);
 
   const calculateHandler = (userInput) => {
     const yearlyData = [];
-    console.log(userInput.current);
 
     let currentSavings = +userInput.current;
     const yearlyContribution = +userInput.yearly;
@@ -28,16 +29,15 @@ export default function App() {
       });
     }
 
-    //console.log(yearlyData);
-
-    setData(yearlyData);
+    setCalculatedData(yearlyData);
   };
 
   return (
     <div>
       <Header />
       <InputForm submitHandle={calculateHandler} />
-      {data ? <Table items={data} /> : <h2 className={styles.msg}>Please input some data</h2>}
+      {/* Conditional rendering the table if it has data in it, if not, returns an H1 message */}
+      {calculatedData ? <Table items={calculatedData} /> : <h2 className={styles.msg}>Please input some data</h2>}
     </div>
   );
 }

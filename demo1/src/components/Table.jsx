@@ -1,8 +1,8 @@
-import TableCell from "./TableCell";
+import TableRow from "./TableRow";
+
 import styles from "../css/table.module.css";
 
 export default function Table(props) {
-  console.log(props);
   return (
     <table className={styles.result}>
       <thead>
@@ -16,7 +16,7 @@ export default function Table(props) {
       </thead>
       <tbody>
         {props.items.map((single) => {
-          return <TableCell key={single.year} item={single} />;
+          return <TableRow key={single.year} item={single} />;
         })}
       </tbody>
     </table>
