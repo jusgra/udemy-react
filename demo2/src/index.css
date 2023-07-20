@@ -21,56 +21,19 @@ body {
   margin-top: 50px;
 }
 
-.form-container {
-  width: 65%;
-  background-color: white;
-  border-radius: 10px;
+.alert {
+  position: fixed;
+  top: 30%;
+  left: 17.5%;
+  z-index: 100;
 }
 
-.form-container form>* {
-  margin: 10px 0;
-}
-
-.form-container form {
-  padding: 0 15px;
-}
-
-.form-container label {
-  display: block;
-  font-weight: bold;
-}
-
-.form-container input {
-  display: block;
+.alert-background {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-.form-container button {
-  border: none;
-  background-color: rgb(69, 21, 114);
-  color: white;
-  padding: 5px 10px;
-}
-
-.list-container {
-  width: 65%;
-  background-color: white;
-  border-radius: 10px;
-  padding: 0 10px;
-}
-
-.list-container ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.list-container li {
-  border: 1px solid;
-  margin: 10px 0;
-}
-
-.list-container li>p {
-  padding: 10px;
-  margin: 0;
+  height: 100vh;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.75);
 }

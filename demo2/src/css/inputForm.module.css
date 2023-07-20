@@ -1,0 +1,24 @@
+.input-form>* {
+    margin: 10px 0;
+}
+
+.input-form {
+    padding: 0 15px;
+}
+
+.input-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.input-form input {
+    display: block;
+    width: 100%;
+}
+
+.input-form button {
+    border: none;
+    background-color: rgb(69, 21, 114);
+    color: white;
+    padding: 5px 10px;
+}

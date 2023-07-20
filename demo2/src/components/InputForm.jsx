@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../css/inputForm.module.css";
 
 export default function InputFrom(props) {
   const [inputs, setInputs] = useState({ name: "", age: "" });
@@ -12,10 +13,11 @@ export default function InputFrom(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.onSubmit(inputs);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles["input-form"]} onSubmit={handleSubmit}>
       <label>Username</label>
       <input onChange={handleChange} name="name" value={inputs.name} type="text"></input>
       <label>Age (Years)</label>

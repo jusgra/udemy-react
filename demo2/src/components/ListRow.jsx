@@ -1,8 +1,10 @@
-export default function ListRow() {
+export default function ListRow(props) {
   return (
     <>
       <li>
-        <p>Max 31 years old</p>
+        <p>
+          {props.name} ({props.age} years old)
+        </p>
       </li>
     </>
   );
