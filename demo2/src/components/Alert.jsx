@@ -20,7 +20,7 @@ export default function Alert(props) {
   return (
     <>
       {createPortal(<Background errorHandle={props.errorHandle} />, document.body)}
-      {createPortal(<AlertPop error={props.error} message={props.message} errorHandle={props.message} />, document.body)}
+      {createPortal(<AlertPop error={props.error} message={props.message} errorHandle={props.errorHandle} />, document.body)}
     </>
   );
 }
