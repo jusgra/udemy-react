@@ -11,9 +11,6 @@ function App() {
     if (localStorage.loggedIn === "1") setIsLoggedIn(true);
   }, []);
 
-  //its a function that gets executed when the dependencies updates
-  useEffect(() => {}, []);
-
   const loginHandler = (email, password) => {
     localStorage.setItem("loggedIn", "1");
     setIsLoggedIn(true);
