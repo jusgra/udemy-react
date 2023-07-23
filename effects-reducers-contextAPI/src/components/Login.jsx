@@ -37,6 +37,7 @@ const Login = (props) => {
 
   const [formIsValid, setFormIsValid] = useState(false);
 
+  //avoid using objects in dependancies, as then the effect would run on any of the property changes
   const { isValid: eValid } = emailState;
   const { isValid: pValid } = pswState;
 
