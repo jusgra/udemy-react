@@ -4,6 +4,8 @@ import Card from "./Card";
 import classes from "./css/Login.module.css";
 import Button from "./Button";
 
+import Input from "./Input";
+
 const USER_ACTIONS = {
   INPUT: "user-input",
   BLUR: "input-blur",
@@ -37,7 +39,6 @@ const Login = (props) => {
 
   const [formIsValid, setFormIsValid] = useState(false);
 
-  //avoid using objects in dependancies, as then the effect would run on any of the property changes
   const { isValid: eValid } = emailState;
   const { isValid: pValid } = pswState;
 
@@ -69,7 +70,9 @@ const Login = (props) => {
   return (
     <Card className={classes.login}>
       <form onSubmit={submitHandler}>
-        <div className={`${classes.control} ${emailState.isValid === false ? classes.invalid : ""}`}>
+        <Input form={"email"} state={emailState} change={emailChangeHandler} blur={validateEmailHandler} />
+        <Input form={"password"} state={pswState} change={passwordChangeHandler} blur={validatePasswordHandler} />
+        {/* <div className={`${classes.control} ${emailState.isValid === false ? classes.invalid : ""}`}>
           <label htmlFor="email">E-Mail</label>
           <input
             type="email"
@@ -88,7 +91,7 @@ const Login = (props) => {
             onChange={passwordChangeHandler}
             onBlur={validatePasswordHandler}
           />
-        </div>
+        </div> */}
         <div className={classes.actions}>
           <Button type="submit" className={classes.btn} disabled={!formIsValid}>
             Login

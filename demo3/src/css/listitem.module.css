@@ -1,0 +1,23 @@
+.list-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.label,
+.desc,
+.price {
+    margin: 0;
+}
+
+.label {
+    font-size: 2rem;
+}
+
+.price {
+    color: red;
+}
+
+.desc {
+    font-style: italic;
+}

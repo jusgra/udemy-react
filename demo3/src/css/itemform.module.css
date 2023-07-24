@@ -1,0 +1,27 @@
+.button-box {
+    text-align: right;
+    width: 20%;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.input {
+    font-size: 1.5rem;
+    width: 3rem;
+
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    background-color: rgb(77, 0, 0);
+    color: white;
+    width: 6rem;
+    height: 30%;
+    border-radius: 20px;
+    margin-top: 1rem;
+}

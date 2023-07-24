@@ -1,0 +1,11 @@
+.list {
+    width: 90%;
+    max-width: 70rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.list>ul {
+    list-style: none;
+    padding: 0 2rem;
+}
