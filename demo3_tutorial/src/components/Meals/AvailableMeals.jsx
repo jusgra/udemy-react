@@ -9,7 +9,13 @@ export default function AvailableMeals() {
       <Card>
         <ul>
           {DUMMY_MEALS.map((single) => (
-            <MealItem key={single.id} name={single.name} description={single.description} price={single.price} />
+            <MealItem
+              key={single.id}
+              id={single.id}
+              name={single.name}
+              description={single.description}
+              price={single.price}
+            />
           ))}
         </ul>
       </Card>
