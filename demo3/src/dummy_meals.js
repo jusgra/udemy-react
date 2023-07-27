@@ -21,19 +21,19 @@ const DUMMY_MEALS = [
     id: "m4",
     name: "Green Bowl",
     description: "Healthy...and green...",
-    price: 18.99,
+    price: 5.49,
   },
   {
     id: "m5",
     name: "Sushi",
     description: "Finest fish and veggies",
-    price: 18.99,
+    price: 11,
   },
   {
     id: "m6",
     name: "Steak",
     description: "Juciy, grilled, yummy",
-    price: 18.99,
+    price: 9.99,
   },
   {
     id: "m7",

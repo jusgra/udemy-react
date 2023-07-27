@@ -2,12 +2,12 @@ import { useRef } from "react";
 import styles from "./fooditemform.module.css";
 import Button from "../UI/Button";
 
-export default function FoodItemForm() {
+export default function FoodItemForm(props, referenceToForward) {
   const inputRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputRef.current.value);
+    props.onSubmitForm(inputRef.current.value);
   };
   return (
     <form onSubmit={handleSubmit} className={styles["button-box"]}>
