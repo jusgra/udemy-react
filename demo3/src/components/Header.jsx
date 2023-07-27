@@ -1,11 +1,11 @@
-import CartButton from "./CartButton";
-import styles from "../css/header.module.css";
+import css from "../css/header.module.css";
+import Button from "./UI/Button";
 
 export default function Header() {
   return (
-    <div className={styles.header}>
-      <h1>ReactMeals</h1>
-      <CartButton />
-    </div>
+    <header className={css.header}>
+      <h1>Pick the food! 🍕</h1>
+      <Button className={css.button}>Order 💸</Button>
+    </header>
   );
 }

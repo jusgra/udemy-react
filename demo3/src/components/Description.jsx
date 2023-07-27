@@ -1,8 +1,8 @@
-import styles from "../css/description.module.css";
+import css from "../css/description.module.css";
 
 export default function Description() {
   return (
-    <div className={styles.summary}>
+    <div className={css.description}>
       <h2>Delicious Food, Delivered To You</h2>
       <p>
         Choose your favorite meal from our broad selection of available meals and enjoy a delicious lunch or dinner at home.

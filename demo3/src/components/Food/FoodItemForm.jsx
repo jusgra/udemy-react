@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import styles from "../css/itemform.module.css";
+import styles from "./fooditemform.module.css";
+import Button from "../UI/Button";
 
-export default function ListItemButtons() {
+export default function FoodItemForm() {
   const inputRef = useRef();
 
   const handleSubmit = (e) => {
@@ -12,7 +13,7 @@ export default function ListItemButtons() {
     <form onSubmit={handleSubmit} className={styles["button-box"]}>
       <label className={styles.label}>Amount</label>
       <input ref={inputRef} className={styles.input} type="number" min="0" max="10" step="1" defaultValue="1"></input>
-      <button className={styles.button}>+ Add</button>
+      <Button className={styles.button}>+ Add</Button>
     </form>
   );
 }

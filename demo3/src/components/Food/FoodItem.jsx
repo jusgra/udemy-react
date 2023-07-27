@@ -1,7 +1,7 @@
-import ItemForm from "./ItemForm";
-import styles from "../css/listitem.module.css";
+import FoodItemForm from "./FoodItemForm";
+import styles from "./fooditem.module.css";
 
-export default function ListItem(props) {
+export default function FoodItem(props) {
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "EUR",
@@ -15,7 +15,7 @@ export default function ListItem(props) {
           <p className={styles.desc}>{props.desc}</p>
           <h2 className={styles.price}>{formatter.format(props.price)}</h2>
         </div>
-        <ItemForm />
+        <FoodItemForm />
       </li>
       <hr />
     </>
