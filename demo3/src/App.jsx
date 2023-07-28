@@ -55,9 +55,9 @@ export default function App() {
     });
   };
 
-  useEffect(() => {
-    console.log(userOrder);
-  }, [userOrder]);
+  // useEffect(() => {
+  //   console.log(userOrder);
+  // }, [userOrder]);
 
   const toggleOrderModal = () => {
     setOpenOrder((oldState) => !oldState);
@@ -68,7 +68,7 @@ export default function App() {
       <Header onClick={toggleOrderModal} orderCount={orderCount} />
       <Description />
       <FoodList onAdd={handleFoodAdd} />
-      {openOrder && <Order list={userOrder} />}
+      {openOrder && <Order onClose={toggleOrderModal} onAdd={handleFoodAdd} list={userOrder} />}
     </>
   );
 }
