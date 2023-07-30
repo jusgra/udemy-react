@@ -1,7 +1,7 @@
 import Description from "./components/Description";
 import Header from "./components/Header";
 import FoodList from "./components/Food/FoodList";
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import Order from "./components/Order/Order";
 
 const reducer = (oldState, action) => {
@@ -79,12 +79,12 @@ const reducer = (oldState, action) => {
 
 export default function App() {
   const [orderState, dispatch] = useReducer(reducer, { food: [], total: 0 });
-  // const [orderCount, setOrderCount] = useState(0);
   const [openOrder, setOpenOrder] = useState(false);
 
   const addItem = (item) => {
     dispatch({ type: "ADD", payload: item });
   };
+
   const removeItem = (id) => {
     dispatch({ type: "REMOVE", payload: id });
   };
@@ -95,7 +95,7 @@ export default function App() {
 
   return (
     <>
-      <Header onClick={toggleOrderModal} orderCount={5} />
+      <Header onClick={toggleOrderModal} orderCount={orderState} />
       <Description />
       <FoodList onAdd={addItem} />
       {openOrder && <Order onClose={toggleOrderModal} onAdd={addItem} onRemove={removeItem} list={orderState} />}
