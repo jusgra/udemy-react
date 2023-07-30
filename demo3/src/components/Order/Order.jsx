@@ -12,6 +12,7 @@ export default function Order(props) {
         <ul>
           {props.list.food.map((single) => (
             <OrderItem
+              onRemove={props.onRemove}
               onAdd={props.onAdd}
               key={single.id}
               id={single.id}
