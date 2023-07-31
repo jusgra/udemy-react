@@ -16,16 +16,13 @@ export default function FoodItem(props) {
   };
 
   return (
-    <>
-      <li className={css["list-box"]}>
-        <div className={css["list-item"]}>
-          <h2 className={css.label}>{props.name}</h2>
-          <p className={css.desc}>{props.desc}</p>
-          <h2 className={css.price}>{price}</h2>
-        </div>
-        <FoodItemForm onSubmitForm={handleInput} />
-      </li>
-      <hr />
-    </>
+    <div className={css["list-box"]}>
+      <div className={css["list-item"]}>
+        <h2 className={css.label}>{props.name}</h2>
+        <p className={css.desc}>{props.desc}</p>
+        <h2 className={css.price}>{price}</h2>
+      </div>
+      <FoodItemForm onSubmitForm={handleInput} />
+    </div>
   );
 }

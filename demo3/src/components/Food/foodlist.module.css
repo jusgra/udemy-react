@@ -1,11 +1,14 @@
 .foodlist {
     width: 90%;
-    max-width: 70rem;
-    margin: auto;
+    max-width: 80rem;
+    margin: 32px auto;
     margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .foodlist>ul {
     list-style: none;
-    padding: 0 2rem;
+    padding: 0;
 }

@@ -19,9 +19,5 @@ export default function FoodList(props) {
     );
   });
 
-  return (
-    <Card className={css.foodlist}>
-      <ul>{listOfItems}</ul>
-    </Card>
-  );
+  return <Card className={css.foodlist}>{listOfItems}</Card>;
 }
