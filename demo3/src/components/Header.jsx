@@ -1,5 +1,6 @@
-import css from "../css/header.module.css";
 import Button from "./UI/Button";
+
+import css from "../css/header.module.css";
 
 export default function Header(props) {
   const totalItems = props.orderCount.food.reduce((prev, curr) => {

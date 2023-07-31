@@ -1,5 +1,6 @@
 import FoodItemForm from "./FoodItemForm";
-import styles from "./fooditem.module.css";
+
+import css from "./fooditem.module.css";
 
 export default function FoodItem(props) {
   const price = props.price.toFixed(2) + " EUR";
@@ -16,11 +17,11 @@ export default function FoodItem(props) {
 
   return (
     <>
-      <li className={styles["list-box"]}>
-        <div className={styles["list-item"]}>
-          <h2 className={styles.label}>{props.name}</h2>
-          <p className={styles.desc}>{props.desc}</p>
-          <h2 className={styles.price}>{price}</h2>
+      <li className={css["list-box"]}>
+        <div className={css["list-item"]}>
+          <h2 className={css.label}>{props.name}</h2>
+          <p className={css.desc}>{props.desc}</p>
+          <h2 className={css.price}>{price}</h2>
         </div>
         <FoodItemForm onSubmitForm={handleInput} />
       </li>
