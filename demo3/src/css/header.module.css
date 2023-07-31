@@ -12,7 +12,7 @@
 .header>h1 {
     display: inline-block;
     color: white;
-    width: 20%;
+    width: 20rem;
     text-align: center;
     margin: 0;
 }
@@ -21,11 +21,41 @@
     width: 15rem;
     height: 3rem;
     font-size: 1.5rem;
+    background-color: white;
+    color: black
 }
 
-.button span {
-    background-color: white;
+.count {
+    background-color: rgb(33, 0, 151);
     padding: 0.25rem 0.5rem;
     border-radius: 15px;
-    color: black;
+    color: white;
+    display: inline-block;
+}
+
+.bump {
+    animation: scaleAnimation 300ms;
+}
+
+@keyframes scaleAnimation {
+
+    0% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(0.7);
+    }
+
+    30% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

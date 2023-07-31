@@ -11,6 +11,7 @@ export default function FoodItemForm(props, referenceToForward) {
     e.preventDefault();
     props.onSubmitForm(inputRef.current.value);
   };
+
   return (
     <form onSubmit={handleSubmit} className={css["button-box"]}>
       <label className={css.label}>Amount</label>

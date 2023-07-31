@@ -9,6 +9,11 @@
 
 .button:hover {
     background-color: rgb(255, 0, 0);
-    transition: background-color 500ms;
+    transition: 300ms;
 
+}
+
+.button:active {
+    transform: translateY(-5px);
+    transition: transform 100ms;
 }
