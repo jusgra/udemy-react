@@ -21,15 +21,15 @@
     width: 15rem;
     height: 3rem;
     font-size: 1.5rem;
-    background-color: white;
-    color: black
+    background-color: #606C5D;
+    color: white;
 }
 
 .count {
-    background-color: rgb(33, 0, 151);
+    background-color: #F7E6C4;
     padding: 0.25rem 0.5rem;
     border-radius: 15px;
-    color: white;
+    color: black;
     display: inline-block;
 }
 

@@ -8,7 +8,7 @@
 }
 
 .button:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: #862B0D;
     transition: 300ms;
 
 }

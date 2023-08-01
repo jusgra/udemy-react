@@ -4,8 +4,6 @@ import css from "./fooditem.module.css";
 export default function FoodItem(props) {
   const price = props.price.toFixed(2) + " EUR";
 
-  console.log(props);
-
   const handleInput = (itemAmount) => {
     const itemToSubmit = {
       id: props.id,

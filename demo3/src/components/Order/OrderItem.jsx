@@ -8,10 +8,11 @@ export default function OrderItem(props) {
   return (
     <li className={css["order-item"]}>
       <h2 className={css.name}>{props.name}</h2>
+      <p className={css.sum}>{cost}</p>
       <div className={css.grid}>
-        <p className={css.sum}>{cost}</p>
+        <p className={css["amount-label"]}>Amount</p>
         <p className={css.amount}>{props.amount}</p>
-        <div>
+        <div className={css["plus-button"]}>
           <Button
             onClick={() => {
               props.onAdd({ id: props.id, name: props.name, price: props.price, amount: 1 });
@@ -21,7 +22,7 @@ export default function OrderItem(props) {
             +
           </Button>
         </div>
-        <div>
+        <div className={css["minus-button"]}>
           <Button
             onClick={() => {
               props.onRemove(props.id);
