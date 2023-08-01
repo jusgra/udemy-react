@@ -3,11 +3,11 @@
     width: 90%;
     margin: auto;
     margin-top: 8rem;
-    background-color: #383838;
-    color: white;
+    background-color: #FFE17B;
+    color: black;
     border-radius: 14px;
     padding: 1rem;
-    box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.25);
     text-align: center;
 }
 

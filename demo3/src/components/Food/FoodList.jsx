@@ -15,6 +15,7 @@ export default function FoodList(props) {
         name={single.name}
         desc={single.description}
         price={single.price}
+        img={single.img}
       />
     );
   });

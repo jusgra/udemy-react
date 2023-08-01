@@ -1,6 +1,11 @@
 .button-box {
-    text-align: center;
-    width: 100%;
+    text-align: right;
+    margin: 10px 0;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* margin-right: 20px; */
 }
 
 .label {
@@ -12,11 +17,22 @@
 .input {
     font-size: 1.5rem;
     width: 3.5rem;
+    height: 2rem;
+    border-radius: 50px 0 0 50px;
+    padding-left: 5px;
+    border: 1px solid black;
 
 }
 
+.price {
+    margin: 0 10px;
+    color: black;
+    display: inline-block;
+}
+
 .button {
-    width: 4rem;
-    height: 30%;
-    margin-top: 1rem;
+    width: 3.5rem;
+    height: 2rem;
+    border-radius: 0 50px 50px 0;
+    font-size: 1.5rem;
 }

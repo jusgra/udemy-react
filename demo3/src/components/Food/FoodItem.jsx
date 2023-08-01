@@ -1,9 +1,10 @@
 import FoodItemForm from "./FoodItemForm";
-
 import css from "./fooditem.module.css";
 
 export default function FoodItem(props) {
   const price = props.price.toFixed(2) + " EUR";
+
+  console.log(props);
 
   const handleInput = (itemAmount) => {
     const itemToSubmit = {
@@ -20,9 +21,11 @@ export default function FoodItem(props) {
       <div className={css["list-item"]}>
         <h2 className={css.label}>{props.name}</h2>
         <p className={css.desc}>{props.desc}</p>
-        <h2 className={css.price}>{price}</h2>
       </div>
-      <FoodItemForm onSubmitForm={handleInput} />
+      {/* <div className={css.img}> */}
+      <img className={css.img2} alt={props.img} src={props.img} />
+      {/* </div> */}
+      <FoodItemForm price={price} onSubmitForm={handleInput} />
     </div>
   );
 }
