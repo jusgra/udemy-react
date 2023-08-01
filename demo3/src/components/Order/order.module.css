@@ -26,3 +26,13 @@
     bottom: 0px;
     left: 0px;
 }
+
+.order-buttons {
+    display: flex;
+    height: 10%;
+    justify-content: flex-end;
+}
+
+.total {
+    margin: 0;
+}

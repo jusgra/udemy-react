@@ -1,3 +1,4 @@
+import Button from "../UI/Button";
 import Card from "../UI/Card";
 import OrderItem from "./OrderItem";
 import css from "./order.module.css";
@@ -22,9 +23,13 @@ export default function Order(props) {
             />
           ))}
         </ul>
-        <p>Total amount: {totalCost}</p>
-        <button onClick={props.onClose}>Submit Order</button>
-        <button onClick={props.onClose}>Close</button>
+        <div className={css["order-buttons"]}>
+          <h2 className={css.total}>Total amount: {totalCost}</h2>
+          <Button className={css.total} onClick={props.onClose}>
+            Submit Order
+          </Button>
+          <Button onClick={props.onClose}>Close</Button>
+        </div>
       </Card>
     </>
   );
