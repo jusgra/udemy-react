@@ -1,12 +1,8 @@
 .foodlist {
-    /* width: 100%; */
     max-width: 1000px;
     margin: 32px auto;
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-auto-rows: 1fr; */
     gap: 20px;
-    /* margin: auto; */
-
 }

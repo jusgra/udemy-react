@@ -3,7 +3,6 @@ import css from "./orderitem.module.css";
 
 export default function OrderItem(props) {
   const cost = (props.price * props.amount).toFixed(2) + " EUR";
-  // console.log(props);
 
   return (
     <li className={css["order-item"]}>

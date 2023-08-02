@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 
 import css from "./foodlist.module.css";
 
-import DUMMY_MEALS from "../../dummy_meals";
+import DUMMY_MEALS from "../../assets/dummy_meals";
 
 export default function FoodList(props) {
   const listOfItems = DUMMY_MEALS.map((single) => {

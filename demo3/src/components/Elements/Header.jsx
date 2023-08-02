@@ -1,6 +1,6 @@
-import Button from "./UI/Button";
+import Button from "../UI/Button";
 
-import css from "../css/header.module.css";
+import css from "./header.module.css";
 
 import { useEffect, useState } from "react";
 

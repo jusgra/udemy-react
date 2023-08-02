@@ -20,9 +20,7 @@ export default function FoodItem(props) {
         <h2 className={css.label}>{props.name}</h2>
         <p className={css.desc}>{props.desc}</p>
       </div>
-      {/* <div className={css.img}> */}
-      <img className={css.img2} alt={props.img} src={props.img} />
-      {/* </div> */}
+      <img className={css.img} alt={props.img} src={props.img} />
       <FoodItemForm price={price} onSubmitForm={handleInput} />
     </div>
   );

@@ -1,6 +1,4 @@
-import imagesArray from "./assets/images";
-
-console.log(imagesArray);
+import imagesArray from "./images";
 
 const DUMMY_MEALS = [
   {

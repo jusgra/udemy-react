@@ -1,5 +1,5 @@
-import Description from "./components/Description";
-import Header from "./components/Header";
+import Description from "./components/Elements/Description";
+import Header from "./components/Elements/Header";
 import FoodList from "./components/Food/FoodList";
 import Order from "./components/Order/Order";
 
