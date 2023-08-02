@@ -24,11 +24,15 @@ export default function Order(props) {
           ))}
         </ul>
         <div className={css["order-buttons"]}>
-          <h2 className={css.total}>Total amount: {totalCost}</h2>
-          <Button className={css.total} onClick={props.onClose}>
+          <Button className={css.close + " " + css.button} onClick={props.onClose}>
+            Close
+          </Button>
+          <h2 className={css.total}>
+            Total amount: <span>{totalCost}</span>
+          </h2>
+          <Button className={css.submit + " " + css.button} onClick={props.onClose}>
             Submit Order
           </Button>
-          <Button onClick={props.onClose}>Close</Button>
         </div>
       </Card>
     </>

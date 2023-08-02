@@ -28,11 +28,37 @@
 }
 
 .order-buttons {
+    margin-top: 5px;
     display: flex;
     height: 10%;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 .total {
     margin: 0;
+    margin-right: 50px;
+    flex: 1;
+    text-align: right;
+    font-size: 2rem;
+    color: black;
+}
+
+.total span {
+
+    color: red;
+}
+
+.submit {
+    width: 20%;
+    font-size: 1.3rem;
+}
+
+.button {
+    background-color: #FFF4F4;
+    color: #606C5D;
+    border: solid 1px;
+}
+
+.button:hover {
+    background-color: #F97B22;
 }
